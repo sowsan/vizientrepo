@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: vizientrepo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vizientrepo 
+    spec:
+      containers:
+        - name: vizientrepo 
+          image: sh360.azurecr.io/vizientrepo 
+          ports:
+          - containerPort: 80
